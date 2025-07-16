@@ -9,12 +9,12 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
-      color: #001F3F;
+      background-color: #f9f9f9;
+      color: #1a1a1a;
     }
     header {
       position: relative;
-      background: linear-gradient(to bottom, #007BFF, #001F3F);
+      background: linear-gradient(to bottom, #0D1B2A, #1B263B);
       color: white;
       text-align: center;
       padding: 100px 20px 60px;
@@ -37,28 +37,35 @@
       padding: 60px 20px;
       text-align: center;
     }
-    .services {
+    .services, .advantages {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
     }
-    .service {
-      background-color: #f5f5f5;
+    .service, .advantage, .disadvantage, .plan, .testimonial {
+      background-color: #ffffff;
       border-radius: 12px;
       padding: 20px;
-      max-width: 300px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 320px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      flex: 1 1 280px;
+    }
+    .advantage {
+      border-left: 5px solid #28a745;
+    }
+    .disadvantage {
+      border-left: 5px solid #dc3545;
     }
     .cta {
-      background: #001F3F;
+      background: #1B263B;
       color: white;
       padding: 40px 20px;
       border-radius: 12px;
       margin-top: 40px;
     }
     .cta a {
-      background: #007BFF;
+      background: #0077B6;
       color: white;
       text-decoration: none;
       padding: 12px 24px;
@@ -69,7 +76,7 @@
     }
     footer {
       padding: 20px;
-      background: #f0f0f0;
+      background: #eaeaea;
       text-align: center;
       color: #333;
     }
@@ -81,24 +88,78 @@
   <h1>Ocean Marketing Agency</h1>
   <p>Automação com Chatbots + Gestão de Mídia para Empresas Locais</p>
   <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="#ffffff" fill-opacity="1" d="M0,96L48,101.3C96,107,192,117,288,133.3C384,149,480,171,576,186.7C672,203,768,213,864,213.3C960,213,1056,203,1152,176C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    <path fill="#f9f9f9" fill-opacity="1" d="M0,96L48,101.3C96,107,192,117,288,133.3C384,149,480,171,576,186.7C672,203,768,213,864,213.3C960,213,1056,203,1152,176C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
   </svg>
 </header>
 
 <section>
-  <h2>Nossos Serviços</h2>
+  <h2>Vantagens vs Desvantagens de Viver sem Automação</h2>
   <div class="services">
-    <div class="service">
-      <h3>Chatbots Inteligentes</h3>
-      <p>Automatize seu atendimento e venda 24h com bots para WhatsApp, Instagram e Facebook.</p>
+    <div class="advantage">
+      <h3>⏱️ Economia de Tempo</h3>
+      <p>Automação reduz tarefas manuais e libera tempo para o que importa.</p>
     </div>
-    <div class="service">
-      <h3>Gestão de Mídia</h3>
-      <p>Alcance seu público com estratégias personalizadas em redes sociais e Google.</p>
+    <div class="disadvantage">
+      <h3>⏳ Perda de Produtividade</h3>
+      <p>Sem automação, a equipe gasta mais tempo com tarefas repetitivas.</p>
     </div>
-    <div class="service">
-      <h3>Identidade Visual</h3>
-      <p>Designs que comunicam e vendem: logotipo, paleta, estilo e presença profissional.</p>
+    <div class="advantage">
+      <h3>📈 Crescimento Escalável</h3>
+      <p>Negócios automatizados crescem sem aumentar custos operacionais.</p>
+    </div>
+    <div class="disadvantage">
+      <h3>🚪 Oportunidades Perdidas</h3>
+      <p>Falta de atendimento instantâneo pode afastar potenciais clientes.</p>
+    </div>
+    <div class="advantage">
+      <h3>📊 Mais Dados e Controle</h3>
+      <p>Monitoramento de métricas e campanhas em tempo real.</p>
+    </div>
+    <div class="disadvantage">
+      <h3>❌ Erros Humanos Frequentes</h3>
+      <p>Sem sistemas automáticos, a chance de falha humana aumenta.</p>
+    </div>
+    <div class="advantage">
+      <h3>🤖 Atendimento 24/7</h3>
+      <p>Chatbots garantem presença constante e suporte imediato.</p>
+    </div>
+    <div class="disadvantage">
+      <h3>💸 Custos Operacionais Altos</h3>
+      <p>Mais pessoas precisam ser contratadas para cobrir tarefas simples.</p>
+    </div>
+    <div class="advantage">
+      <h3>🚀 Imagem Moderna</h3>
+      <p>Automação mostra profissionalismo e inovação ao mercado.</p>
+    </div>
+    <div class="disadvantage">
+      <h3>📉 Competitividade Reduzida</h3>
+      <p>Negócios manuais ficam para trás frente aos que usam tecnologia.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Depoimento Real</h2>
+  <div class="testimonial">
+    <p>"Desde que começamos a usar os serviços da Ocean, nossa lavandaria teve um salto de 400% nas vendas mensais. O chatbot responde automaticamente, agenda serviços e envia lembretes. Nunca estivemos tão organizados e rentáveis!"</p>
+    <strong>— Lavandaria CrystalClean, Maputo</strong>
+  </div>
+</section>
+
+<section>
+  <h2>Nossos Planos</h2>
+  <div class="services">
+    <div class="plan">
+      <h3>Plano Iniciante</h3>
+      <p>Ideal para negócios que estão começando. Chatbot básico + gestão de 1 rede social.</p>
+    </div>
+    <div class="plan">
+      <h3>Plano Profissional</h3>
+      <p>Automação completa com chatbot inteligente + gestão de até 3 redes + relatórios mensais.</p>
+    </div>
+    <div class="plan">
+      <h3>Plano Premium</h3>
+      <p>Suporte total, estratégias personalizadas, funis automatizados e mídia paga inclusa.</p>
     </div>
   </div>
 </section>
@@ -106,7 +167,7 @@
 <section class="cta">
   <h2>Quer Automatizar e Crescer?</h2>
   <p>Fale conosco agora mesmo e veja como podemos transformar sua empresa com tecnologia e marketing de impacto.</p>
-  <a href="https://wa.me/258847937675" target="_blank">📲 Falar no WhatsApp</a>
+  <a href="https://wa.me/258847937675" target="_blank">Falar no WhatsApp</a>
 </section>
 
 <footer>
