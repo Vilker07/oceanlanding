@@ -6,26 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ocean Marketing Agency</title>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #1a1a1a;
+      background-color: #0A192F;
+      color: #F0F0F0;
+      scroll-behavior: smooth;
     }
     header {
-      position: relative;
-      background: linear-gradient(to bottom, #0D1B2A, #1B263B);
-      color: white;
+      background: #0A192F;
       text-align: center;
-      padding: 100px 20px 60px;
+      padding: 120px 20px 80px;
+      position: relative;
     }
     header h1 {
-      font-size: 3em;
-      margin: 0;
+      font-size: 3.5rem;
+      color: #64FFDA;
+      margin-bottom: 10px;
     }
     header p {
-      font-size: 1.2em;
-      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #8892B0;
     }
     .wave {
       position: absolute;
@@ -34,41 +39,49 @@
       height: 80px;
     }
     section {
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
+      transition: background 0.3s ease;
     }
-    .services, .advantages {
+    section:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    h2 {
+      font-size: 2rem;
+      color: #64FFDA;
+      margin-bottom: 40px;
+    }
+    .flex-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      margin-top: 30px;
     }
-    .service, .advantage, .disadvantage, .plan, .testimonial {
-      background-color: #ffffff;
-      border-radius: 12px;
-      padding: 20px;
-      max-width: 320px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      flex: 1 1 280px;
+    .card {
+      background: #112240;
+      border-radius: 10px;
+      padding: 30px;
+      width: 300px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .advantage {
-      border-left: 5px solid #28a745;
-    }
-    .disadvantage {
-      border-left: 5px solid #dc3545;
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px rgba(100,255,218,0.2);
     }
     .cta {
-      background: #1B263B;
+      background: #112240;
       color: white;
-      padding: 40px 20px;
+      padding: 60px 20px;
       border-radius: 12px;
-      margin-top: 40px;
+      margin-top: 60px;
     }
     .cta a {
-      background: #0077B6;
-      color: white;
+      background: #64FFDA;
+      color: #0A192F;
       text-decoration: none;
-      padding: 12px 24px;
+      padding: 14px 28px;
       border-radius: 8px;
       font-weight: bold;
       display: inline-block;
@@ -76,102 +89,66 @@
     }
     footer {
       padding: 20px;
-      background: #eaeaea;
+      background: #020c1b;
       text-align: center;
-      color: #333;
+      color: #8892B0;
+      font-size: 0.9rem;
+    }
+    img.logo {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      width: 120px;
+      opacity: 0.7;
     }
   </style>
 </head>
 <body>
 
+<img src="https://i.imgur.com/NBbxrWN.png" alt="Ocean Logo" class="logo" />
+
 <header>
   <h1>Ocean Marketing Agency</h1>
   <p>Automação com Chatbots + Gestão de Mídia para Empresas Locais</p>
   <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="#f9f9f9" fill-opacity="1" d="M0,96L48,101.3C96,107,192,117,288,133.3C384,149,480,171,576,186.7C672,203,768,213,864,213.3C960,213,1056,203,1152,176C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    <path fill="#112240" fill-opacity="1" d="M0,160L40,149.3C80,139,160,117,240,128C320,139,400,181,480,176C560,171,640,117,720,112C800,107,880,149,960,154.7C1040,160,1120,128,1200,122.7C1280,117,1360,139,1400,149.3L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
   </svg>
 </header>
 
 <section>
-  <h2>Vantagens vs Desvantagens de Viver sem Automação</h2>
-  <div class="services">
-    <div class="advantage">
-      <h3>⏱️ Economia de Tempo</h3>
-      <p>Automação reduz tarefas manuais e libera tempo para o que importa.</p>
+  <h2>Por que Automatizar?</h2>
+  <div class="flex-container">
+    <div class="card">
+      <h3>Atendimento 24/7</h3>
+      <p>Chatbots nunca dormem. Sua empresa atende clientes a qualquer hora.</p>
     </div>
-    <div class="disadvantage">
-      <h3>⏳ Perda de Produtividade</h3>
-      <p>Sem automação, a equipe gasta mais tempo com tarefas repetitivas.</p>
+    <div class="card">
+      <h3>Produtividade</h3>
+      <p>Reduza tarefas repetitivas e foque no crescimento do seu negócio.</p>
     </div>
-    <div class="advantage">
-      <h3>📈 Crescimento Escalável</h3>
-      <p>Negócios automatizados crescem sem aumentar custos operacionais.</p>
-    </div>
-    <div class="disadvantage">
-      <h3>🚪 Oportunidades Perdidas</h3>
-      <p>Falta de atendimento instantâneo pode afastar potenciais clientes.</p>
-    </div>
-    <div class="advantage">
-      <h3>📊 Mais Dados e Controle</h3>
-      <p>Monitoramento de métricas e campanhas em tempo real.</p>
-    </div>
-    <div class="disadvantage">
-      <h3>❌ Erros Humanos Frequentes</h3>
-      <p>Sem sistemas automáticos, a chance de falha humana aumenta.</p>
-    </div>
-    <div class="advantage">
-      <h3>🤖 Atendimento 24/7</h3>
-      <p>Chatbots garantem presença constante e suporte imediato.</p>
-    </div>
-    <div class="disadvantage">
-      <h3>💸 Custos Operacionais Altos</h3>
-      <p>Mais pessoas precisam ser contratadas para cobrir tarefas simples.</p>
-    </div>
-    <div class="advantage">
-      <h3>🚀 Imagem Moderna</h3>
-      <p>Automação mostra profissionalismo e inovação ao mercado.</p>
-    </div>
-    <div class="disadvantage">
-      <h3>📉 Competitividade Reduzida</h3>
-      <p>Negócios manuais ficam para trás frente aos que usam tecnologia.</p>
+    <div class="card">
+      <h3>Mais Vendas</h3>
+      <p>Capte leads automaticamente e converta mais com funis digitais.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>Depoimento Real</h2>
-  <div class="testimonial">
-    <p>"Desde que começamos a usar os serviços da Ocean, nossa lavandaria teve um salto de 400% nas vendas mensais. O chatbot responde automaticamente, agenda serviços e envia lembretes. Nunca estivemos tão organizados e rentáveis!"</p>
-    <strong>— Lavandaria CrystalClean, Maputo</strong>
-  </div>
-</section>
-
-<section>
-  <h2>Nossos Planos</h2>
-  <div class="services">
-    <div class="plan">
-      <h3>Plano Iniciante</h3>
-      <p>Ideal para negócios que estão começando. Chatbot básico + gestão de 1 rede social.</p>
-    </div>
-    <div class="plan">
-      <h3>Plano Profissional</h3>
-      <p>Automação completa com chatbot inteligente + gestão de até 3 redes + relatórios mensais.</p>
-    </div>
-    <div class="plan">
-      <h3>Plano Premium</h3>
-      <p>Suporte total, estratégias personalizadas, funis automatizados e mídia paga inclusa.</p>
-    </div>
+  <h2>História de Sucesso</h2>
+  <div class="card">
+    <p>"A Ocean criou um chatbot para nossa lavandaria e aumentamos 400% nas vendas mensais! Nunca foi tão fácil agendar, lembrar e vender!"</p>
+    <strong>— Lavandaria CrystalClean</strong>
   </div>
 </section>
 
 <section class="cta">
-  <h2>Quer Automatizar e Crescer?</h2>
-  <p>Fale conosco agora mesmo e veja como podemos transformar sua empresa com tecnologia e marketing de impacto.</p>
+  <h2>Vamos Automatizar Sua Empresa?</h2>
+  <p>Transforme sua comunicação, vendas e imagem digital com a Ocean.</p>
   <a href="https://wa.me/258847937675" target="_blank">Falar no WhatsApp</a>
 </section>
 
 <footer>
-  &copy; 2025 Ocean Marketing Agency - Todos os direitos reservados.
+  &copy; 2025 Ocean Marketing Agency. Desenvolvido com visão e paixão.
 </footer>
 
 </body>
