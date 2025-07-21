@@ -2,59 +2,210 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ocean Marketing</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A Ocean transforma estratégias digitais em crescimento real. Conheça nossos serviços de tráfego pago, automação, criação de sites e mais." />
+  <title>Ocean Marketing — Cresça com Inteligência</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #001f3f url('https://www.transparenttextures.com/patterns/cubes.png');
+      color: #f0f8ff;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(160deg, #000c1f, #00254d);
+      color: white;
+      text-align: center;
+      padding: 60px 20px 80px;
+      position: relative;
+    }
+    header img {
+      width: 160px;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+    }
+    header p {
+      margin-top: 20px;
+      font-size: 1.3rem;
+    }
+    .cta-group {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .cta {
+      background: #0074D9;
+      color: white;
+      padding: 14px 24px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .cta:hover {
+      background: #00bfff;
+      transform: scale(1.05);
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #003366;
+      padding: 24px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    }
+    .card h3 {
+      color: #00bfff;
+    }
+    .btn-secondary {
+      background: #00bfff;
+      color: #001f3f;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .btn-secondary:hover {
+      background: #00a3cc;
+      transform: scale(1.05);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      background-color: #002c4d;
+      color: #f0f8ff;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #0074D9;
+    }
+    th {
+      background-color: #005bb5;
+    }
+    footer {
+      background: #001730;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Ocean Marketing</h1>
-    <nav>
-      <a href="https://instagram.com/oceangroup_mz" target="_blank">Instagram</a>
-      <a href="https://facebook.com/oceangroup_mz" target="_blank">Facebook</a>
-    </nav>
+    <img src="/mnt/data/Waves (1).png" alt="Logo Ocean Group" />
+    <h1>Transformamos Estratégias em Crescimento Real</h1>
+    <p>Marketing de performance, automação e tráfego pago para empresas que querem escalar com inteligência.</p>
+    <div class="cta-group">
+      <button class="cta" onclick="window.location.href='https://forms.gle/'">Formulário</button>
+      <button class="cta" onclick="window.location.href='https://facebook.com/oceangroupmz'">Facebook</button>
+      <button class="cta" onclick="window.location.href='https://instagram.com/oceangroupmz'">Instagram</button>
+    </div>
   </header>
 
-  <section id="testemunhos">
-    <h2>O que dizem nossos clientes</h2>
-    <div class="testimonial">
-      <p>"Depois de implementar o chatbot da Ocean, conseguimos triplicar o volume de agendamentos. Foi uma revolução no atendimento!"</p>
-      <span>— Rosa Matola, Lavandaria Brilhante</span>
-    </div>
-    <div class="testimonial">
-      <p>"Antes da Ocean, lutávamos para manter uma presença online. Agora temos clientes todos os dias pelas redes sociais."</p>
-      <span>— João Tembe, Barbeiro Local</span>
-    </div>
-    <div class="testimonial">
-      <p>"Nossos serviços eram ótimos, mas ninguém sabia. A Ocean colocou nosso negócio no mapa. Resultados reais!"</p>
-      <span>— Carla M., Restaurante Luz do Mar</span>
+  <section>
+    <h2>Você se identifica com isso?</h2>
+    <div class="grid">
+      <div class="card">Sua empresa tem redes sociais, mas não converte?</div>
+      <div class="card">Você responde DMs manualmente e perde tempo?</div>
+      <div class="card">Cansado de impulsionar sem retorno real?</div>
     </div>
   </section>
 
-  <section id="problemas-solucoes">
-    <h2>Problemas vs Soluções</h2>
-    <div class="problemas-solucoes-grid">
-      <div class="coluna">
-        <h3>Problemas Comuns</h3>
-        <ul>
-          <li>Poucos clientes locais</li>
-          <li>Atendimento lento no WhatsApp</li>
-          <li>Redes sociais abandonadas</li>
-          <li>Falta de automação</li>
-          <li>Negócio invisível no Google</li>
-        </ul>
+  <section>
+    <h2>Serviços Ocean</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Tráfego Pago</h3>
+        <p>Levamos seus anúncios até quem realmente importa. Mais cliques, mais conversões, mais clientes.</p>
+        <button class="btn-secondary">Escalar agora</button>
       </div>
-      <div class="coluna">
-        <h3>Soluções da Ocean</h3>
-        <ul>
-          <li>Tráfego pago para atrair mais clientes</li>
-          <li>Chatbot inteligente 24/7</li>
-          <li>Gestão diária de conteúdo</li>
-          <li>Automação de mensagens e follow-ups</li>
-          <li>Presença garantida no Google Maps</li>
-        </ul>
+      <div class="card">
+        <h3>Automação & Chatbots</h3>
+        <p>Economize tempo e converta 24/7 com bots que conversam, vendem e encantam seus clientes.</p>
+        <button class="btn-secondary">Quero automação</button>
+      </div>
+      <div class="card">
+        <h3>Websites Premium</h3>
+        <p>Sites rápidos, bonitos e otimizados para gerar confiança e resultados reais.</p>
+        <button class="btn-secondary">Criar meu site</button>
       </div>
     </div>
   </section>
+
+  <section>
+    <h2>Planos Ocean 🌊</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Plano</th>
+          <th>Ideal Para</th>
+          <th>Serviços Incluídos</th>
+          <th>Preço</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Starter</td>
+          <td>Pequenas Empresas</td>
+          <td>Gestão de redes + tráfego local</td>
+          <td>15.000 MT</td>
+        </tr>
+        <tr>
+          <td>Pro</td>
+          <td>Médias Empresas</td>
+          <td>Starter + Chatbot + Website</td>
+          <td>30.000 MT</td>
+        </tr>
+        <tr>
+          <td>Empire</td>
+          <td>Empresas em Expansão</td>
+          <td>Pro + SEO + Relatórios Estratégicos</td>
+          <td>60.000 MT</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Por que escolher a Ocean?</h2>
+    <div class="grid">
+      <div class="card">Transparência total e foco em resultados.</div>
+      <div class="card">Integração com IA para automação de processos.</div>
+      <div class="card">Equipe com visão estratégica e execução rápida.</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Ocean Marketing © 2025 — Todos os direitos reservados</p>
+  </footer>
 </body>
 </html>
