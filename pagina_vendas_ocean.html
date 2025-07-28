@@ -1,209 +1,123 @@
 <!DOCTYPE html>
-<html lang="pt">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A Ocean transforma estratégias digitais em crescimento real. Conheça nossos serviços de tráfego pago, automação, criação de sites e mais." />
-  <title>Ocean Marketing — Cresça com Inteligência</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background: #001f3f url('https://www.transparenttextures.com/patterns/cubes.png');
-      color: #f0f8ff;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(160deg, #000c1f, #00254d);
-      color: white;
-      text-align: center;
-      padding: 60px 20px 80px;
-      position: relative;
-    }
-    header img {
-      width: 160px;
-      margin-bottom: 30px;
-    }
-    header h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 3rem;
-    }
-    header p {
-      margin-top: 20px;
-      font-size: 1.3rem;
-    }
-    .cta-group {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-    .cta {
-      background: #0074D9;
-      color: white;
-      padding: 14px 24px;
-      border: none;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-    .cta:hover {
-      background: #00bfff;
-      transform: scale(1.05);
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #003366;
-      padding: 24px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-    }
-    .card h3 {
-      color: #00bfff;
-    }
-    .btn-secondary {
-      background: #00bfff;
-      color: #001f3f;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-top: 15px;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-    .btn-secondary:hover {
-      background: #00a3cc;
-      transform: scale(1.05);
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 30px;
-      background-color: #002c4d;
-      color: #f0f8ff;
-    }
-    th, td {
-      padding: 12px;
-      text-align: center;
-      border: 1px solid #0074D9;
-    }
-    th {
-      background-color: #005bb5;
-    }
-    footer {
-      background: #001730;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="/mnt/data/Waves (1).png" alt="Logo Ocean Group" />
-    <h1>Transformamos Estratégias em Crescimento Real</h1>
-    <p>Marketing de performance, automação e tráfego pago para empresas que querem escalar com inteligência.</p>
-    <div class="cta-group">
-      <button class="cta" onclick="window.location.href='https://forms.gle/'">Formulário</button>
-      <button class="cta" onclick="window.location.href='https://facebook.com/oceangroupmz'">Facebook</button>
-      <button class="cta" onclick="window.location.href='https://instagram.com/oceangroupmz'">Instagram</button>
-    </div>
-  </header>
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
-  <section>
-    <h2>Você se identifica com isso?</h2>
-    <div class="grid">
-      <div class="card">Sua empresa tem redes sociais, mas não converte?</div>
-      <div class="card">Você responde DMs manualmente e perde tempo?</div>
-      <div class="card">Cansado de impulsionar sem retorno real?</div>
-    </div>
-  </section>
+export default function Home() {
+  const [form, setForm] = useState({ nome: "", email: "", mensagem: "" });
 
-  <section>
-    <h2>Serviços Ocean</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Tráfego Pago</h3>
-        <p>Levamos seus anúncios até quem realmente importa. Mais cliques, mais conversões, mais clientes.</p>
-        <button class="btn-secondary">Escalar agora</button>
-      </div>
-      <div class="card">
-        <h3>Automação & Chatbots</h3>
-        <p>Economize tempo e converta 24/7 com bots que conversam, vendem e encantam seus clientes.</p>
-        <button class="btn-secondary">Quero automação</button>
-      </div>
-      <div class="card">
-        <h3>Websites Premium</h3>
-        <p>Sites rápidos, bonitos e otimizados para gerar confiança e resultados reais.</p>
-        <button class="btn-secondary">Criar meu site</button>
-      </div>
-    </div>
-  </section>
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    alert("Mensagem enviada com sucesso!");
+    setForm({ nome: "", email: "", mensagem: "" });
+  }
 
-  <section>
-    <h2>Planos Ocean 🌊</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Plano</th>
-          <th>Ideal Para</th>
-          <th>Serviços Incluídos</th>
-          <th>Preço</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Starter</td>
-          <td>Pequenas Empresas</td>
-          <td>Gestão de redes + tráfego local</td>
-          <td>15.000 MT</td>
-        </tr>
-        <tr>
-          <td>Pro</td>
-          <td>Médias Empresas</td>
-          <td>Starter + Chatbot + Website</td>
-          <td>30.000 MT</td>
-        </tr>
-        <tr>
-          <td>Empire</td>
-          <td>Empresas em Expansão</td>
-          <td>Pro + SEO + Relatórios Estratégicos</td>
-          <td>60.000 MT</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+  return (
+    <main className="min-h-screen bg-gradient-to-br from-black via-blue-950 to-black text-white px-4 py-10 font-sans">
+      <section className="text-center space-y-6 mb-20">
+        <motion.img
+          src="/Waves (1).png"
+          alt="Logo Ocean Group"
+          className="mx-auto w-32 h-32 object-contain"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+        />
+        <motion.h1
+          className="text-4xl md:text-6xl font-bold text-blue-400 drop-shadow-lg"
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          Ocean Group: Automatizando Seus Processos
+        </motion.h1>
+        <p className="text-lg md:text-xl text-blue-200 max-w-3xl mx-auto">
+          Domine o marketing digital com automação inteligente, tráfego pago de alta performance e estratégias sob medida para seu negócio.
+        </p>
+        <div className="flex justify-center flex-wrap gap-4 mt-6">
+          <Button className="bg-blue-500 hover:bg-blue-700 transition duration-300 px-6 py-2 rounded-full text-white font-bold">
+            Falar Connosco
+          </Button>
+          <Button className="bg-blue-500 hover:bg-blue-700 transition duration-300 px-6 py-2 rounded-full text-white font-bold">
+            Instagram
+          </Button>
+          <Button className="bg-blue-500 hover:bg-blue-700 transition duration-300 px-6 py-2 rounded-full text-white font-bold">
+            Facebook
+          </Button>
+        </div>
+      </section>
 
-  <section>
-    <h2>Por que escolher a Ocean?</h2>
-    <div class="grid">
-      <div class="card">Transparência total e foco em resultados.</div>
-      <div class="card">Integração com IA para automação de processos.</div>
-      <div class="card">Equipe com visão estratégica e execução rápida.</div>
-    </div>
-  </section>
+      <section className="grid md:grid-cols-3 gap-6 mb-20">
+        {[
+          { title: "Automação", desc: "Ganhe tempo com sistemas que trabalham por você 24h por dia." },
+          { title: "Tráfego Pago", desc: "Atraia clientes prontos para comprar com anúncios estratégicos." },
+          { title: "Gestão Inteligente", desc: "Controle seu funil e aumente conversões com IA aplicada." },
+        ].map((item, idx) => (
+          <Card
+            key={idx}
+            className="bg-gradient-to-br from-blue-900 to-blue-700 hover:scale-105 hover:shadow-xl transition duration-300 border-none text-white"
+          >
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+              <p>{item.desc}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </section>
 
+      <section className="max-w-4xl mx-auto mb-20">
+        <h2 className="text-3xl font-bold text-center mb-6 text-blue-400">Planos e Pacotes</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            { plano: "Starter", preco: "5.000 MT", beneficios: ["Landing Page", "Gestão de Redes", "1 Campanha por mês"] },
+            { plano: "Profissional", preco: "12.000 MT", beneficios: ["Website Completo", "Campanhas Semanais", "Chatbot Integrado"] },
+            { plano: "Corporativo", preco: "25.000 MT", beneficios: ["Automação Completa", "SEO Avançado", "Suporte Prioritário"] },
+          ].map((p, i) => (
+            <Card key={i} className="bg-blue-800 hover:scale-105 hover:shadow-xl transition duration-300 text-white">
+              <CardContent className="p-6 space-y-2">
+                <h3 className="text-xl font-bold">{p.plano}</h3>
+                <p className="text-2xl font-bold text-blue-300">{p.preco}</p>
+                <ul className="list-disc list-inside">
+                  {p.beneficios.map((b, j) => <li key={j}>{b}</li>)}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      <section className="max-w-2xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-6 text-blue-400">Solicite uma Proposta</h2>
+        <form onSubmit={handleSubmit} className="bg-blue-900 p-6 rounded-lg space-y-4">
+          <Input
+            placeholder="Seu nome"
+            value={form.nome}
+            onChange={(e) => setForm({ ...form, nome: e.target.value })}
+            className="bg-blue-800 text-white border-blue-600"
+          />
+          <Input
+            placeholder="Seu email"
+            value={form.email}
+            onChange={(e) => setForm({ ...form, email: e.target.value })}
+            className="bg-blue-800 text-white border-blue-600"
+          />
+          <Textarea
+            placeholder="Como podemos ajudar?"
+            value={form.mensagem}
+            onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
+            className="bg-blue-800 text-white border-blue-600"
+          />
+          <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold">
+            Enviar Mensagem
+          </Button>
+        </form>
+      </section>
+    </main>
+  );
+}
   <footer>
     <p>Ocean Marketing © 2025 — Todos os direitos reservados</p>
   </footer>
